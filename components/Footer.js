@@ -78,27 +78,17 @@ const navigation = {
   export default function Footer() {
     return (
       <footer className="bg-white">
-        
+        <hr className='mb-10'/>
         <div className="container mx-auto text-center">
         <Image src={logo} alt="Logo" className="mx-auto" width={150} height={100}/>
       </div>
-        <div className="px-6 pb-20 mx-auto overflow-hidden max-w-7xl sm:pt-4 sm:pb-24lg:px-8">
-          <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-            {navigation.main.map((item) => (
-              <div key={item.name} className="pb-6">
-                <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                  {item.name}
-                </a>
-              </div>
-            ))}
-          </nav>
-          <p className="mt-2 text-center text-gray-500 text-m leading-15"><b>
-            Made with <span className="text-purple-500">💜</span> and 🪵 </b>
+      <p className="mt-2 text-center text-gray-500 text-l leading-15">
+            Made with <span className="text-purple-500">💚</span> and 🪵 
           </p>
-          <p className="mt-2 text-xs leading-5 text-center text-gray-500">
+      <p className="mt-10 mb-10 text-xs leading-5 text-center text-gray-500">
             &copy; 2023 The Scout Toolbox. All rights reserved.
           </p>
-        </div>
+      
       </footer>
     )
   }
@@ -113,4 +103,18 @@ const navigation = {
             ))}
           </div>
 
+                  <div className="px-6 pt-20 pb-20 mx-auto overflow-hidden max-w-7xl sm:pt-4 sm:pb-24lg:px-8">
+          <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+            {navigation.main.map((item) => (
+              <div key={item.name} className="pb-6">
+                <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                  {item.name}
+                </a>
+              </div>
+            ))}
+          </nav>
+          <p className="mt-2 text-center text-gray-500 text-m leading-15"><b>
+            Made with <span className="text-purple-500">💜</span> and 🪵 </b>
+          </p>
+        </div>
           */
