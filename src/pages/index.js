@@ -27,7 +27,6 @@ export default function Home() {
       <Grid/>
       <Badges/>
       <Faq/>
-      <Footer/>
     </>
   )
 }

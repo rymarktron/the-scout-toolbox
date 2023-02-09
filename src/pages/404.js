@@ -8,14 +8,9 @@ export default function page() {
         <div className="flex flex-col min-h-full pt-16 pb-12 bg-white">
           <main className="flex flex-col justify-center flex-grow w-full px-6 mx-auto max-w-7xl lg:px-8">
             <div className="flex justify-center flex-shrink-0">
-              <img className="w-auto h-12" src = "Bears"/>
+              <Image className="w-auto h-24" src = {Bears}/>
               <Link href="/" className="inline-flex">
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="w-auto h-12"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
               </Link>
             </div>
             <div className="py-16">
