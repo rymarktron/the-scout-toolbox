@@ -24,13 +24,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
-      <Navbar/>
-      <Banner />
-      <Feature />
       <Grid/>
       <Badges/>
-      <Blog/>
       <Faq/>
       <Footer/>
     </>
