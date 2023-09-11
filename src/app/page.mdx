@@ -1,0 +1,42 @@
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+
+
+export const metadata = {
+  title: 'The Scout Toolbox',
+  description:
+    'Learn everything there is to know about Scouting.',
+}
+
+export const sections = [
+  { title: 'Guides', id: 'guides' },
+  { title: 'Resources', id: 'resources' },
+]
+
+<HeroPattern />
+
+# Scout Toolbox 📦
+Use the Scout Toolbox to learn more about Scouting and experiencing the outdoors. In the words of the Scout's motto: ["Be Prepared."](#) {{ className: 'lead' }}
+
+<div className="not-prose mb-16 mt-6 flex gap-3">
+  <Button href="/camping" arrow="right" children="Camping" />
+  <Button href="/history" variant="outline" children="History of Scouting" />
+</div>
+
+## About {{ anchor: false }}
+When boiled down, [outdoor skills](#) is the key to success for most Scouts to support them in their outdoor adventures and ensure safety is always met. There are many guides on this site that showcase this.
+If there is any incorrect information of anything needs to be added, feel free to fill this form out:
+
+<div className="not-prose">
+  <Button
+    href="https://docs.google.com/forms/d/e/1FAIpQLSclulXyblw5FqQIqtz1A1jKaWZDWwTmjeLCCfARfwHoXHOFSw/viewform"
+    variant="text"
+    arrow="right"
+    children="Suggestion Box 📦"
+  />
+</div>
+
+<Resources />
+
+<Guides />
