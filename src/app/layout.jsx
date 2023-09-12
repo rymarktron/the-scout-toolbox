@@ -1,6 +1,6 @@
 import glob from 'fast-glob'
 
-import { Providers } from '@/app/providers'
+import { Providers } from './providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'

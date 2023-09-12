@@ -112,11 +112,13 @@ function SmallPrint() {
         </p>
       </div>
       
-      <div className="flex justify-end flex-grow gap-6"> {/* Added flex-grow and justify-end classes */}
-        <SocialLink href="#" icon={GitHubIcon}>
+      {/* 
+      <div className="flex justify-end flex-grow gap-6"> {}
+      <SocialLink href="#" icon={GitHubIcon}>
           Follow us on GitHub
         </SocialLink>
       </div>
+      */}
     </div>
   )
 }

@@ -23,7 +23,7 @@ export function Logo(props) {
       d="M143.97 29.14h41.13V57.6h-41.13z"
       style={{
         fill: "#28572a",
-        stroke: "#000",
+        stroke: "#fff",
         strokeWidth: ".5px",
         strokeMiterlimit: 10,
       }}

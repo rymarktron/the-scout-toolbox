@@ -80,7 +80,6 @@ export const Header = forwardRef(function Header({ className }, ref) {
         <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
         <div className="flex gap-4">
           <MobileSearch />
-          <ThemeToggle />
         </div>
         
         {/*
@@ -91,3 +90,5 @@ export const Header = forwardRef(function Header({ className }, ref) {
     </motion.div>
   )
 })
+
+//          <ThemeToggle />
