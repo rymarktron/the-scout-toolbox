@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 function SunIcon(props) {
   return (
@@ -22,13 +22,13 @@ function MoonIcon(props) {
 }
 
 export function ThemeToggle() {
-  let { resolvedTheme, setTheme } = useTheme()
-  let otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
-  let [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme();
+  const otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <button
@@ -39,6 +39,6 @@ export function ThemeToggle() {
     >
       <SunIcon className="w-5 h-5 stroke-orange-500 dark:hidden hover:fill-orange-500" />
       <MoonIcon className="hidden w-5 h-5 stroke-blue-400 dark:block hover:fill-blue-400" />
-    </button> 
-  )
+    </button>
+  );
 }
