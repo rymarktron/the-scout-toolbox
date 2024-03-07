@@ -2,12 +2,13 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useTheme } from 'next-themes';
 
 import { Button } from '@/components/Button'
 import { navigation } from '@/components/Navigation'
 import Image from 'next/image'
 import logoToolbox from '@/images/logos/logo.png'
-
+import logoToolboxWhite from '@/images/logos/logo_white.png'
 
 function PageLink({ label, page, previous = false }) {
   return (
@@ -102,10 +103,13 @@ function SocialLink({ href, icon: Icon, children }) {
 }
 
 function SmallPrint() {
+  const { theme } = useTheme();
+  const logo = theme === 'dark' ? logoToolbox : logoToolboxWhite;
+
   return (
     <div className="flex items-start pt-8 border-t border-zinc-900/5 dark:border-white/5 sm:flex-row">
       <div className="flex items-center gap-6">
-        <Image src={logoToolbox} alt="Logo" width={150} height={100}/>
+        <Image src={logo} alt="Logo" width={150} height={100}/>
         <p className="text-xs text-zinc-600 dark:text-zinc-400">
           Made with <span className="text-purple-500">💚</span> and 🪵 <br/>
           &copy; {new Date().getFullYear()} The Scout Toolbox. All rights reserved.
