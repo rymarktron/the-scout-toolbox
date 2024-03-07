@@ -2,10 +2,13 @@ import { forwardRef } from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { useTheme } from 'next-themes';
 
 import { Button } from '@/components/Button'
 import { Logo } from '@/components/Logo'
-import { Logo2 } from '@/components/Logo-2'
+import logoToolbox from '@/images/logos/logo.png'
+import logoToolboxWhite from '@/images/logos/logo_white.png'
+
 import {
   MobileNavigation,
   useIsInsideMobileNavigation,
@@ -36,6 +39,8 @@ export const Header = forwardRef(function Header({ className }, ref) {
   let bgOpacityLight = useTransform(scrollY, [0, 72], [0.5, 0.9])
   let bgOpacityDark = useTransform(scrollY, [0, 72], [0.2, 0.8])
 
+  const { theme } = useTheme();
+  const logo = theme === 'dark' ? logoToolbox : logoToolboxWhite;
   return (
     <motion.div
       ref={ref}
@@ -63,9 +68,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <Search />
       <div className="flex items-center gap-5 lg:hidden">
         <MobileNavigation />
-        <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
-        </Link>
+        <Image src={logo} alt="Logo" width={150} height={100} className="h-8" />
       </div>
       <div className="flex items-center gap-5">
         <nav className="hidden md:block">
